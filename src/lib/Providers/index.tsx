@@ -1,10 +1,12 @@
 "use client";
 
+import { store } from "@/redux/features/store";
 import {
   ThemeProvider as NextThemeProvider,
   ThemeProviderProps,
 } from "next-themes";
 import React, { useEffect, useState } from "react";
+import { Provider as ReduxProvider } from "react-redux";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -23,14 +25,16 @@ export function Providers({ children, themeProps }: ProvidersProps) {
   }
 
   return (
-    <NextThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange={false}
-      {...themeProps}
-    >
-      {children}
-    </NextThemeProvider>
+    <ReduxProvider store={store}>
+      <NextThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange={false}
+        {...themeProps}
+      >
+        {children}
+      </NextThemeProvider>
+    </ReduxProvider>
   );
 }
