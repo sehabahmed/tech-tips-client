@@ -22,3 +22,5 @@ const tipsApi = baseApi.injectEndpoints({
     }),
   }),
 });
+
+export const { useTipsPostMutation, useGetAllTipsQuery } = tipsApi; 
