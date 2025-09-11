@@ -20,7 +20,17 @@ const tipsApi = baseApi.injectEndpoints({
         return { data: response.data };
       },
     }),
+    getSingleTip: builder.query({
+      query: (id: string) => ({
+        url: `/tips/${id}`,
+        method: "GET",
+      }),
+      providesTags: ["tips"],
+      transformResponse: (response: TResponseRedux<any>) => {
+        return { data: response.data };
+      },
+    }),
   }),
 });
 
-export const { useTipsPostMutation, useGetAllTipsQuery } = tipsApi; 
+export const { useTipsPostMutation, useGetAllTipsQuery, useGetSingleTipQuery } = tipsApi; 

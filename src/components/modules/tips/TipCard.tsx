@@ -23,7 +23,7 @@ function TipCard({ tip }) {
           <h1 className="text-2xl font-semibold capitalize w-[90%]">{title}</h1>
           <Link
             href={`/tips/${_id}`}
-            className=" text-base dark:text-white text-white font-semibold  group-hover:opacity-100 opacity-0 translate-y-2 group-hover:translate-y-0 pt-2 flex gap-1  transition-all duration-300  "
+            className="text-base dark:text-white text-white font-semibold  group-hover:opacity-100 opacity-0 translate-y-2 group-hover:translate-y-0 pt-2 flex gap-1  transition-all duration-300  "
           >
             Explore Tips
             <span>
