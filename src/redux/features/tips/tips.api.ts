@@ -1,4 +1,5 @@
 import { baseApi } from "@/redux/api/baseApi";
+import { TTip } from "@/types";
 import { TResponseRedux } from "@/types/global.type";
 
 const tipsApi = baseApi.injectEndpoints({
@@ -16,7 +17,7 @@ const tipsApi = baseApi.injectEndpoints({
         method: "GET",
       }),
       providesTags: ["tips"],
-      transformResponse: (response: TResponseRedux<any>) => {
+      transformResponse: (response: TResponseRedux<TTip[]>) => {
         return { data: response.data };
       },
     }),
@@ -26,7 +27,7 @@ const tipsApi = baseApi.injectEndpoints({
         method: "GET",
       }),
       providesTags: ["tips"],
-      transformResponse: (response: TResponseRedux<any>) => {
+      transformResponse: (response: TResponseRedux<TTip>) => {
         return { data: response.data };
       },
     }),

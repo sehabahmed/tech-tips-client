@@ -5,6 +5,7 @@ import { ArrowLeft, Tag } from "lucide-react";
 import Link from "next/link";
 import { useGetSingleTipQuery } from "@/redux/features/tips/tips.api";
 
+
 function TipDetailPage({id}: {id: string}) {
   
   const { data: tipData } = useGetSingleTipQuery(id);

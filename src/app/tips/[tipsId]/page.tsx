@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 
 const TipDetails = () => {
     const params = useParams();
-const id = params.tipsId as string | undefined;
+const id = params.tipsId as string;
     console.log(id);
 
   return (

@@ -2,7 +2,13 @@ import Image from "next/image";
 import { ChevronsRight } from "lucide-react";
 import Link from "next/link";
 
-function TipCard({ tip }) {
+interface ITip {
+  _id: string;
+  title: string;
+}
+
+
+function TipCard({ tip }: { tip: ITip }) {
   const { _id, title } = tip;
   return (
     <>
