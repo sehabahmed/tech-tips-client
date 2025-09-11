@@ -5,19 +5,18 @@ import Link from "next/link";
 interface ITip {
   _id: string;
   title: string;
+  image: string;
 }
 
 
 function TipCard({ tip }: { tip: ITip }) {
-  const { _id, title } = tip;
+  const { _id, title, image } = tip;
   return (
     <>
       <div className="w-[400px] relative mt-4 h-[400px] group mx-auto dark:bg-black  bg-white dark:border-0 border overflow-hidden rounded-md dark:text-white text-black ">
         <figure className="w-full h-full rounded-md  overflow-hidden">
           <Image
-            src={
-              "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format"
-            }
+            src={image}
             alt="shoes"
             width={600}
             height={600}
