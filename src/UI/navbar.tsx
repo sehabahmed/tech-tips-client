@@ -18,8 +18,6 @@ const Navbar = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/tips", label: "Tips" },
-    { href: "#", label: "About" },
-    { href: "#", label: "Contact" },
   ];
 
   const toggleTheme = () => {

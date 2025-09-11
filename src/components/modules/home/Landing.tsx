@@ -4,8 +4,10 @@ import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/utils/utils";
 import ShimmerButton from "./shimer-button";
 import WordAnimator from "./word-animator";
+import Link from "next/link";
 
 const LandingPage = () => {
+
   const [blocks, setBlocks] = useState([]);
 
   const activeDivs = useMemo(
@@ -87,17 +89,19 @@ const LandingPage = () => {
             digital world with bite-sized, actionable tips.
           </p>
           <div className="flex gap-2 justify-center items-center mt-4">
-            <ShimmerButton
-              borderRadius={"100px"}
-              className={cn(
-                "flex items-center gap-2 w-fit rounded-full text-white border sm:px-4 px-2 py-2"
-              )}
-              background={"#334cec"}
-            >
-              <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                Explore Tech Tips
-              </span>
-            </ShimmerButton>
+            <Link href="/tips">
+              <ShimmerButton
+                borderRadius={"100px"}
+                className={cn(
+                  "flex items-center gap-2 w-fit rounded-full text-white border sm:px-4 px-2 py-2"
+                )}
+                background={"#334cec"}
+              >
+                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                  Explore Tech Tips
+                </span>
+              </ShimmerButton>
+            </Link>
           </div>
         </article>
 
