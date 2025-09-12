@@ -7,6 +7,7 @@ type TTipCategory = {
 }
 
 export type TTip = {
+    _id: string;
     title: string;
     content: string;
     category?: TTipCategory;

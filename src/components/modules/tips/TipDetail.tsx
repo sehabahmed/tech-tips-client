@@ -5,9 +5,7 @@ import { ArrowLeft, Tag } from "lucide-react";
 import Link from "next/link";
 import { useGetSingleTipQuery } from "@/redux/features/tips/tips.api";
 
-
-function TipDetailPage({id}: {id: string}) {
-  
+function TipDetailPage({ id }: { id: string }) {
   const { data: tipData } = useGetSingleTipQuery(id);
 
   console.log("tipData:", tipData);
@@ -56,19 +54,18 @@ function TipDetailPage({id}: {id: string}) {
           )}
 
           {/* Title */}
-           <h1 className="text-3xl md:text-4xl font-bold leading-tight capitalize">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight capitalize">
             {title}
-          </h1> 
+          </h1>
 
           {/* Content */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <div className="dark:text-gray-300 text-gray-700 leading-relaxed">
               {/* Simple content rendering - you can enhance this based on your content format */}
-              
-                <div className="space-y-4">
-                  <p>{content}</p>
-                </div>
-         
+
+              <div className="space-y-4">
+                <p>{content}</p>
+              </div>
             </div>
           </div>
         </div>
